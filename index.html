@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="slideshow.css" />
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Home</a>
+      <a href="works.html">Works</a>
+      <a href="contact.html">Contact</a>
+      <label class="switch" for="themeSwitch">
+        <input type="checkbox" id="themeSwitch" name="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="header">
+      <h1>Art Portfolio</h1>
+      <span
+        id="side_navbtn"
+        style="font-size: 30px; cursor: pointer; display: inline-block"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+
+    <main>
+      <div class="slideshow">
+        <fieldset id="slideshowFieldset">
+          <legend align="center"><h2>Highlights:</h2></legend>
+          <div class="slideshow-container">
+            <button class="nav-btn-left" onclick="prevImage()">&#10094;</button>
+
+            <button class="nav-btn-right" onclick="nextImage()">
+              &#10095;
+            </button>
+          </div>
+        </fieldset>
+
+        <div class="thumbnails"></div>
+      </div>
+    </main>
+    <footer>
+      &copy; 2025 All works shown in the above website is copyrighted upon
+      creation and requires proper citations to use or redistribute in any form.
+      Permision is given for only non-comercial use with proper citations.
+    </footer>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="#">Works</a>
+      <a href="contact.html">Contact</a>
+      <label class="switch" for="themeSwitch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="header">
+      <h1>Art Portfolio</h1>
+      <span
+        id="side_navbtn"
+        style="font-size: 30px; cursor: pointer; display: inline-block"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+    <main>
+      <div class="searchFilter">
+        <fieldset id="searching">
+          <legend align="center"><h3>Search Filter:</h3></legend>
+          Search Keys:<br />
+          <input type="text" id="searchKey" />
+          <br />
+          Start Date: <br />
+          <input type="date" id="startDate" />
+          <br />
+          End Date: <br />
+          <input type="date" id="endDate" />
+          <br />
+          <input
+            type="submit"
+            name="submit"
+            value="Submit"
+            id="submit-search"
+          />
+        </fieldset>
+      </div>
+
+      <div class="sortWorks">
+        <fieldset id="sorting">
+          <legend align="center"><h3>Sort Works:</h3></legend>
+          <fieldset id="sortingCriteria">
+            <legend><strong>Sorting Criteria:</strong></legend>
+            <input
+              type="radio"
+              id="titles"
+              name="sortingCriteria"
+              value="Titles"
+              checked
+            />
+            <label for="titles">Titles</label><br />
+            <input type="radio" id="date" name="sortingCriteria" value="Date" />
+            <label for="date">Date</label><br />
+            <input
+              type="radio"
+              id="titlesDate"
+              name="sortingCriteria"
+              value="TitlesDate"
+            />
+            <label for="titles">Titles (Date Secondary)</label><br />
+            <input
+              type="radio"
+              id="dateTitles"
+              name="sortingCriteria"
+              value="DateTitles"
+            />
+            <label for="titles">Date (Titles Secondary)</label><br />
+          </fieldset>
+          <fieldset id="sortingOrder">
+            <legend><strong>Sorting Order:</strong></legend>
+            <input
+              type="radio"
+              id="ascending"
+              name="sortingOrder"
+              value="Ascending"
+              checked
+            />
+            <label for="ascending">Ascending</label><br />
+            <input
+              type="radio"
+              id="descending"
+              name="sortingOrder"
+              value="Descending"
+            />
+            <label for="decending">Descending</label><br />
+          </fieldset>
+          <br />
+          <input type="submit" name="submit" value="Submit" id="submit-sort" />
+        </fieldset>
+      </div>
+
+      <h1>Image Gallery</h1>
+      <div class="gallery" id="gallery"></div>
+
+      <div id="imgModal" class="modal">
+        <img id="modalImage" alt="Selected Gallery Image" />
+        <p id="imgInfo"></p>
+        <a class="closebtn" onclick="closeModal()">&times;</a>
+      </div>
+    </main>
+    <footer>
+      &copy; 2025 All works shown in the above website is copyrighted upon
+      creation and requires proper citations to use or redistribute in any form.
+      Permision is given for only non-comercial use with proper citations.
+    </footer>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>

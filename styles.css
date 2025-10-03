@@ -1,0 +1,188 @@
+/*//////////General stylization//////////*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --darkAmount: invert(0%);
+  --hover-color: #111;
+  --nav-background-color: #f1f1f1;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  padding: 0;
+}
+
+.header {
+  background: #015851;
+  color: #f4f4f4;
+  padding: 80px;
+  text-align: center;
+}
+
+main {
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  display: block;
+  font-family: "Comic Sans MS";
+  font-size: 17px;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: #76cfdf;
+}
+
+a:hover {
+  color: #5670e6;
+}
+
+a[href^="http"]:visited {
+  color: #c765d4;
+}
+
+/*//////////Side navigation stylization//////////*/
+.sidenav {
+  background-color: var(--nav-background-color);
+  height: 100%;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 60px;
+  position: fixed;
+  top: 0;
+  transition: 0.5s;
+  width: 0;
+  z-index: 2;
+}
+
+.sidenav a {
+  color: #818181;
+  display: block;
+  font-size: 25px;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: var(--hover-color);
+}
+
+.sidenav .closebtn {
+  font-size: 36px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.sidenav .closebtn:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
+/*//////////Submit button stylization//////////*/
+input[type="submit"] {
+  border: none;
+  background-color: #015851;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #769b9b;
+}
+
+input[type="submit"]:active {
+  background-color: #11a373;
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 600px) {
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+/*//////////Dark mode aesthetics//////////*/
+.dark {
+  --darkAmount: invert(100%);
+  --hover-color: #f4f4f4;
+  --nav-background-color: #111;
+  background-color: #1b1a1a;
+  color: #f4f4f4;
+}
+
+/*//////////Dark mode switch//////////*/
+.switch {
+  bottom: 10px;
+  display: block;
+  height: 28px;
+  margin-left: 102px;
+  position: absolute;
+  width: 45px;
+}
+
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.slider {
+  background-color: #ccc;
+  border-color: #015851;
+  border-radius: 25px;
+  border-style: solid;
+  bottom: 0;
+  box-sizing: content-box;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #1b1b1b;
+  border-radius: 50%;
+  bottom: 1px;
+  content: "";
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+
+input:checked + .slider {
+  background-color: #1f1f1f;
+}
+
+input:checked + .slider:before {
+  background-color: #d3d3d3;
+  mask: radial-gradient(12px at left, #0000 100%, #000);
+  transform: translateX(16px) rotate(18deg);
+}

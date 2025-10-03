@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="contact_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="works.html">Works</a>
+      <a href="#">Contact</a>
+      <label class="switch" for="themeSwitch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="header">
+      <h1>Art Portfolio</h1>
+      <span
+        id="side_navbtn"
+        style="font-size: 30px; cursor: pointer; display: inline-block"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+    <main>
+      <img
+        id="profileImg"
+        src="./images/ProfilePicture.png"
+        loading="lazy"
+        alt="profileImage"
+      />
+      <p id="profileMessage">
+        If you would like to get in touch, feel free to reach out!
+      </p>
+
+      <form class="contact-form" id="contact-form" method="post">
+        <input
+          type="hidden"
+          name="access_key"
+          value="f97070c9-e6f0-4d10-acb1-b8e4572cf94b"
+        />
+        <label for="preventionCheck" style="display: none"
+          >preventionCheck</label
+        >
+        <input
+          type="text"
+          id="preventionCheck"
+          name="preventionCheck"
+          style="display: none"
+        />
+
+        <label for="checkbox" style="display: none">checkbox</label>
+        <input
+          type="checkbox"
+          name="botcheck"
+          id="checkbox"
+          style="display: none"
+        />
+        <label for="username">Name</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          autofocus
+          autocomplete="name"
+        />
+
+        <br />
+        <label for="email">Email</label>
+
+        <input
+          type="text"
+          id="email"
+          name="email"
+          required
+          autofocus
+          autocomplete="email"
+        />
+
+        <br />
+        <label for="subject">Subject</label>
+
+        <input type="text" id="subject" name="subject" required autofocus />
+
+        <br />
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          style="height: 200px"
+          required
+          autofocus
+          maxlength="1000"
+        ></textarea>
+
+        <br />
+        <input type="submit" name="submit" value="Submit" id="submit-contact" />
+        <div id="result"></div>
+      </form>
+
+      <div class="contactLogos">
+        <!-- <a
+          target="_blank"
+          href="https://github.com/cxn2479"
+          class="icon-button"
+        >
+          <img src="./icons/icons8-instagram-logo-64.png" alt="contactIcon" />
+        </a>
+        <a
+          target="_blank"
+          href=""
+          class="icon-button"
+        > 
+          <img src="./icons/icons8-tumblr-64.png" alt="contactIcon" />
+        </a> -->
+        <a
+          target="_blank"
+          href="https://github.com/cxn2479"
+          class="icon-button"
+        >
+          <img src="./icons/icons8-github-logo-64.png" alt="contactIcon" />
+        </a>
+      </div>
+    </main>
+    <footer>
+      &copy; 2025 All works shown in the above website is copyrighted upon
+      creation and requires proper citations to use or redistribute in any form.
+      Permision is given for only non-comercial use with proper citations.
+      Social media icons were provided by
+      <a target="_blank" href="https://icons8.com/icon">Icon8</a>.
+    </footer>
+    <script src="scripts.js" defer></script>
+  </body>
+</html>

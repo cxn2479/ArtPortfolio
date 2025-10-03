@@ -1,0 +1,92 @@
+.slideshow {
+  height: auto;
+  margin: 0;
+  width: 100%;
+}
+
+#slideshowFieldset {
+  margin: auto;
+  padding: 0 0 30px 0;
+  width: 95vw;
+}
+
+/*//////////Contains the main image, navigation arrows, and thumbnail images//////////*/
+.slideshow-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-height: 90%;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+  position: relative;
+}
+
+.mainImg {
+  height: auto;
+  max-width: 90%;
+  min-height: 40vh;
+  object-fit: contain;
+  width: 90%;
+}
+
+.thumbnails {
+  border-radius: 5px;
+  display: block;
+  gap: 2px;
+  margin: auto;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: auto;
+  white-space: nowrap;
+  width: 80vw;
+}
+
+.thumbnails img {
+  border: 2px solid transparent;
+  cursor: pointer;
+  height: 80px;
+  justify-content: center;
+  transition: border 0.3s;
+  width: 120px;
+}
+
+.thumbnails img:first-child {
+  margin-left: auto;
+}
+.thumbnails img:last-child {
+  margin-right: auto;
+}
+
+.thumbnails img:hover,
+img.active {
+  border: 3px solid #1c94f7;
+}
+
+.nav-btn-left,
+.nav-btn-right {
+  background-color: transparent;
+  border: none;
+  color: #f5f5f586;
+  font-size: 40px;
+  margin: 0;
+  padding: 100% 1% 100% 1%;
+  position: absolute;
+}
+
+.nav-btn-left {
+  left: 0%;
+}
+
+.nav-btn-right {
+  right: 0%;
+}
+
+.nav-btn-left:hover,
+.nav-btn-right:hover {
+  background-color: rgba(61, 61, 61, 0.342);
+  color: #f5f5f5;
+}

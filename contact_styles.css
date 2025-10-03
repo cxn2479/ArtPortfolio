@@ -1,0 +1,71 @@
+/*//////////Contact form stylization//////////*/
+.contact-form {
+  margin: auto;
+  width: 80vw;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form {
+    height: auto;
+    width: 98vw;
+  }
+}
+
+input[type="text"],
+select,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Comic Sans MS";
+  font-size: 15px;
+  margin-bottom: 16px;
+  margin-top: 6px;
+  padding: flex;
+  resize: vertical;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: red;
+}
+
+/*//////////Social media outreach icon stylization//////////*/
+.contactLogos {
+  display: flex;
+}
+
+.contactLogos img {
+  height: 40px;
+  filter: var(--darkAmount);
+  width: 40px;
+}
+
+.contactLogos img:hover {
+  filter: invert(50%) sepia(89%) saturate(10000%) hue-rotate(175deg)
+    contrast(106%);
+}
+
+.contactLogos button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+/*//////////Profile stylization//////////*/
+#profileImg {
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  height: auto;
+  margin-top: 20px;
+  max-width: 200px;
+  min-width: 150px;
+  width: 20%;
+}
+
+#profileMessage {
+  font-size: 18px;
+}
