@@ -73,7 +73,7 @@ function changeImage(index)
   {
     mainImage.src = images[index].src;
     mainImage.setAttribute("idx", index);
-    images[index].classList.add('active');
+    images[index].classList.add("active");
   }
 }
 
@@ -260,7 +260,7 @@ function validateForm(preventionCheck, name, email, subject, message)
     document.body.innerHTML = `
     <h1>404 - Page Not Found</h1>
     <p>Sorry, the page you are looking for does not exist.</p>`;
-    document.title = '404 - Not Found';
+    document.title = "404 - Not Found";
     return false;
   }
 
@@ -370,10 +370,10 @@ function isNameValid(name) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if (document.URL.includes("index"))
+if (window.location.href.endsWith("/") || window.location.href.endsWith("/index.html"))
 {  
   //Fetch list of images mentioned in hightlights file to showcase in the highlight slideshow
-  fetch('highlights.json')
+  fetch("highlights.json")
     .then(response => response.json())
     .then(images => 
     {
@@ -391,7 +391,7 @@ if (document.URL.includes("index"))
       //Create the thumbnail images
       images.forEach((image, idx) => 
       {
-        const img = document.createElement('img');
+        const img = document.createElement("img");
         img.classList.add("thumb");
         img.src = `./images/${image.imgFile}`;
         img.alt = image.imgTitle;
@@ -402,16 +402,16 @@ if (document.URL.includes("index"))
       });
       
       //All thumbnail images to be clicked for fast view change
-      document.querySelectorAll('.thumb').forEach((img, idx) => 
+      document.querySelectorAll(".thumb").forEach((img, idx) => 
       {
         img.addEventListener("click", () => {changeImage(idx)});
       });
 
       //Make the first image to be the initial active image
-      document.querySelectorAll(".thumb")[0].classList.add('active');
+      document.querySelectorAll(".thumb")[0].classList.add("active");
     })
 
-  .catch(error => console.error('Error loading images:', error));
+  .catch(error => console.error("Error loading images:", error));
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -421,20 +421,20 @@ if (document.URL.includes("index"))
 if (document.URL.includes("works"))
 {
   //Fetches list of images mentioned in images file to showcase in the image gallery
-  fetch('images.json')
+  fetch("images.json")
     .then(response => response.json())
     .then(images => 
     {
 
       //Create the image container
-      const gallery = document.getElementById('gallery');
+      const gallery = document.getElementById("gallery");
       images.forEach(image => 
       {
-        const container = document.createElement('div');
+        const container = document.createElement("div");
         container.classList.add("container", "show")
         container.id = image.imgFile + "_" + image.imgTitle + "_" + image.imgDate;
 
-        const img = document.createElement('img');
+        const img = document.createElement("img");
         img.src = `./images/${image.imgFile}`;
         img.alt = image.imgFile;
         img.loading = "lazy";
@@ -449,17 +449,17 @@ if (document.URL.includes("works"))
         });
 
         //Create the image overlay and append it and image to image container
-        const title = document.createElement('p');
-        const date = document.createElement('p');
-        const description = document.createElement('p');
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
+        const title = document.createElement("p");
+        const date = document.createElement("p");
+        const description = document.createElement("p");
+        const overlay = document.createElement("div");
+        overlay.classList.add("overlay");
         title.textContent = `Title: ${image.imgTitle}`;
         date.textContent = `Date: ${image.imgDate}`;
         description.textContent = `Description: ${image.imgDescription}`;
-        title.classList.add('title');
-        date.classList.add('date');
-        description.classList.add('description');
+        title.classList.add("title");
+        date.classList.add("date");
+        description.classList.add("description");
         overlay.appendChild(title);
         overlay.appendChild(date);
         overlay.appendChild(description);
@@ -468,7 +468,7 @@ if (document.URL.includes("works"))
         gallery.appendChild(container);
       });
     })
-  .catch(error => console.error('Error loading images:', error));
+  .catch(error => console.error("Error loading images:", error));
 
   
   //Perform image search when search submit button is clicked
@@ -509,12 +509,12 @@ if (document.URL.includes("contact"))
     e.preventDefault();
 
     //Perform validation checks on submitted contact form data
-    const contactForm = document.querySelector('contact-form');
-    const preventionCheck = document.getElementById('preventionCheck').value;
-    const name = String(document.getElementById('username').value).trim();
-    const email = String(document.getElementById('email').value).trim();
-    const subject = String(document.getElementById('subject').value).trim();
-    const message = String(document.getElementById('message').value).trim();
+    const contactForm = document.querySelector("contact-form");
+    const preventionCheck = document.getElementById("preventionCheck").value;
+    const name = String(document.getElementById("username").value).trim();
+    const email = String(document.getElementById("email").value).trim();
+    const subject = String(document.getElementById("subject").value).trim();
+    const message = String(document.getElementById("message").value).trim();
 
     let check = validateForm(preventionCheck, name, email, subject, message);
 
