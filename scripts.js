@@ -370,7 +370,7 @@ function isNameValid(name) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if (window.location.href.endsWith("/") || window.location.href.endsWith("/index.html"))
+if (window.location.href.endsWith("/ArtPortfolio/") || window.location.href.endsWith("/index.html"))
 {  
   //Fetch list of images mentioned in hightlights file to showcase in the highlight slideshow
   fetch("highlights.json")
