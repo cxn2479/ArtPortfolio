@@ -4,6 +4,6 @@ This is just a basic website to showcase some artworks created through the last 
 
 In the future, I plan to add more artworks as well as make the website format more user-friendly and maybe provide additional functionalities.
 
-The website does require javascript to be enabled to preoperly showcase the images on the website.
+The website does require javascript to be enabled to properly showcase the images on the website.
 
 Feel free to use the code for your own website formatting if you'd like.
